@@ -1,0 +1,55 @@
+/* 1. Thiết lập chung cho Navbar */
+.navbar {
+    display: flex; /* Kích hoạt Flexbox */
+    justify-content: space-between; /* Đẩy các nhóm (trái, giữa, phải) ra hai bên */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    background-color: #333;
+    padding: 10px 20px;
+    height: 50px; /* Chiều cao cố định */
+}
+
+/* 2. Căn chỉnh các nhóm */
+.nav-left,
+.nav-right {
+    display: flex;
+    /* Dùng flex-grow: 1 để đảm bảo 2 bên chiếm đủ không gian còn lại */
+    flex-grow: 1; 
+    /* Đặt chiều rộng tối đa để các phần tử ở giữa không bị ép quá nhỏ */
+    max-width: 300px; 
+}
+
+.nav-left {
+    justify-content: flex-start; /* Căn menu bên trái sát lề trái */
+}
+
+.nav-right {
+    justify-content: flex-end; /* Căn menu bên phải sát lề phải */
+}
+
+/* 3. Định kiểu cho Logo ở giữa */
+.nav-logo {
+    /* Đảm bảo logo nằm ở giữa tuyệt đối */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    /* Không cho logo co lại */
+    flex-shrink: 0; 
+}
+
+.logo-text {
+    color: #ff9900; /* Màu nổi bật cho logo */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* 4. Định kiểu cho các liên kết */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff9900;
+}
