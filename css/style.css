@@ -1,0 +1,25 @@
+/* --- CÀI ĐẶT TOÀN CỤC & FONT --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Giúp quản lý padding và border dễ dàng hơn */
+}
+
+html, body {
+    height: 100%; /* Rất quan trọng cho bố cục dính footer */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* --- BỐ CỤC FLEXBOX CHÍNH (Sticky Footer) --- */
+/* * Đây là phần quan trọng nhất để làm layout
+ * 1. body sẽ là một cột flex
+ * 2. main sẽ 'phát triển' (grow) để lấp đầy không gian
+ * 3. footer sẽ bị đẩy xuống dưới cùng
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Đảm bảo body luôn cao ít nhất bằng màn hình */
+}
+
